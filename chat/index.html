@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAT</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="person-selector">
+        <button class="button person-selector-button active-person" id="dani-selector">Dani</button>
+        <button class="button person-selector-button" id="len-selector">Len</button>
+    </div>
+    <div class="chat-container">
+        <h2 class="chat-header">Dani está escribiendo...</h2>
+        <div class="chat-messages">
+            <div class="message blue-bg">
+                <div class="message-sender">Dani</div>
+                <div class="message-text">Ey Len, qué tal?</div>
+                <div class="message-timestamp">10:30 AM</div>
+            </div>
+            <div class="message gray-bg">
+                <div class="message-sender">Len</div>
+                <div class="message-text">Aquí, no haciendo mucho. Tú qué tal?</div>
+                <div class="message-timestamp">10:35 AM</div>
+            </div>
+        </div>
+        <form class="chat-input-form">
+            <input type="text" class="chat-input" required placeholder="Escribe aquí, Dani...">
+            <button type="submit" class="button send-button">Enviar</button>
+        </form>
+        <button class="button clear-chat-button">Borrar Chat</button>
+    </div>
+    <!--JS-->    
+    <script src="code.js"></script> 
+</body>
+</html>
+

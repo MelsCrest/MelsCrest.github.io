@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CONTACT</title>
+	<!--CSS-->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!--FontAwesome-->
+	<script src="https://kit.fontawesome.com/bdb8577c6f.js" crossorigin="anonymous"></script>
+	<!--Google Fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div id="container">
+		<header>
+			<h1>CONTACT</h1>
+		</header>
+		<main>
+		<!--Menú desplegable-->	
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+					<li><a href="works.html">Works</a>
+						<ul>
+							<li><a href="#">Cabinet</a></li>
+							<li><a href="#">Chandeliers</a></li>
+							<li><a href="#">Tables</a></li>
+						</ul>
+					</li>
+					<li><a href="shows.html">Shows</a>
+						<ul>
+							<li><a href="#">New York</a></li>
+							<li><a href="#">Paris</a></li>
+							<li><a href="#">Athens</a></li>
+						</ul>
+					</li>
+					<li><a href="about.html">About me</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		<!-- Formulario-->
+			<div id="formulario">
+				<h2>Contact me</h2>
+				<form action="destino.php" method="post" enctype="text/plain" name="contactame">
+					<label for="name">*Name</label>
+					<input type="text" name="name" required>
+					<label for="surname">*Surname</label>
+					<input type="text" name="surname" required>
+					<label for="email">E-mail</label>
+					<input type="email" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+					<label for="telephone">Telephone</label>
+					<input type="tel" name="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}-[0-9]{3}" title="034-000-000-000">
+				<!--Textarea-->
+					<label class="texto" for="coment">Leave a message
+						<textarea id="coment" name="coment" rows="10" cols="50"></textarea>
+					</label>					
+					<input id="enviar" type="submit" value="SUBMIT">
+				</form>
+			</div>
+		</main>
+		<footer>
+			<p>© Kostas Lambridis Art 1988-2023</p>
+		<!--Redes Sociales-->
+			<div class="rrss">
+			<!--Facebook-->
+				<div class="face">
+					<a href="https://www.facebook.com/kostandinos.lambridis/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+				</div>
+			<!--Instagram-->
+				<div class="ins">
+					<a href="https://www.instagram.com/kostaslambridis/?hl=es" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+				</div>
+			<!--Youtube-->
+				<div class="you">
+					<a href="https://www.youtube.com/watch?v=sHAPn1Sd3vc" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+				</div>
+			<!--X-->
+				<div class="exs">
+					<a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fkostaslisa" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PELICULAS</title>
+    <script type="text/javascript" src="code.js"></script>  
+    <script src="https://kit.fontawesome.com/bdb8577c6f.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .contenedor{
+            width: 1000px;
+            background: lightblue;
+            margin: 0 auto;
+
+        }
+        nav{
+            width: 980px;
+            height: 80px;
+            text-align: center;
+            background: lightcoral;
+            padding: 10px;
+        }
+        nav i{
+            cursor: pointer;
+            font-size: 30px;
+            margin-left: 15px;
+        }
+        main{
+            width: 980px;
+            text-align: center;
+        }
+        main img{
+            width: 225px;
+            height: 300px;
+            margin: 5px;
+            object-fit: cover;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <nav>
+            <i class="fa-solid fa-person-rifle" onclick="filtrar('accion')" title="Acción"></i>
+            <i class="fa-solid fa-star" onclick="filtrar('animacion')" title="Animación"></i>
+            <i class="fa-solid fa-person-hiking" onclick="filtrar('aventura')" title="Aventura"></i>
+            <i class="fa-brands fa-reddit-alien" onclick="filtrar('ciencia ficcion')" title="Ciencia Ficción"></i>
+            <i class="fa-solid fa-face-grin-tears" onclick="filtrar('comedia')" title="Comedia"></i>
+            <i class="fa-solid fa-earth-europe" onclick="filtrar('documental')" title="Documental"></i>
+            <i class="fa-solid fa-face-sad-tear" onclick="filtrar('drama')" title="Drama"></i>
+            <i class="fa-solid fa-hat-wizard" onclick="filtrar('fantastico')" title="Fantástico"></i>
+            <i class="fa-solid fa-music" onclick="filtrar('musical')" title="Musical"></i>
+            <i class="fa-solid fa-heart" onclick="filtrar('romantico')" title="Romántico"></i>         
+            <i class="fa-solid fa-user-secret" onclick="filtrar('suspense')" title="Suspense"></i>
+            <i class="fa-solid fa-skull" onclick="filtrar('terror')" title="Terror"></i>
+            
+
+            <i class="fa-solid fa-arrow-rotate-left" onclick="resetear()" title="Resetear"></i>
+            
+        </nav>
+        <main>
+            <img src="img/01.jpg" class="terror comedia fantastico">
+            <img src="img/02.jpg" class="drama romantico">
+            <img src="img/03.jpg" class="drama">
+            <img src="img/04.jpg" class="comedia ciencia ficcion">
+            <img src="img/05.jpg" class="terror suspense">
+            <img src="img/06.jpg" class="terror">
+            <img src="img/07.jpg" class="terror">
+            <img src="img/08.jpg" class="terror suspense">
+            <img src="img/09.jpg" class="terror drama">
+            <img src="img/10.jpg" class="terror">
+            <img src="img/11.jpg" class="accion">
+            <img src="img/12.jpg" class="accion ciencia ficcion suspense">
+            <img src="img/13.jpg" class="accion ciencia ficcion">
+            <img src="img/14.jpg" class="accion ciencia ficcion">
+            <img src="img/15.jpg" class="accion suspense">
+            <img src="img/16.jpg" class="accion aventura suspense">
+            <img src="img/17.jpg" class="aventura accion">
+            <img src="img/18.jpg" class="aventura accion fantastico">
+            <img src="img/19.jpg" class="aventura accion ciencia ficcion">
+            <img src="img/20.jpg" class="aventura drama">
+            <img src="img/21.jpg" class="aventura comedia">
+            <img src="img/22.jpg" class="ciencia ficcion accion suspense">
+            <img src="img/23.jpg" class="ciencia ficcion animacion">
+            <img src="img/24.jpg" class="ciencia ficcion accion">
+            <img src="img/25.jpg" class="ciencia ficcion comedia accion drama animacion">
+            <img src="img/57.jpg" class="animacion comedia musical fantastico drama">
+            <img src="img/27.jpg" class="ciencia ficcion drama">
+            <img src="img/50.jpg" class="musical romantico drama">
+            <img src="img/28.jpg" class="comedia">
+            <img src="img/52.jpg" class="suspense terror">
+            <img src="img/43.jpg" class="fantastico aventura">
+            <img src="img/30.jpg" class="comedia fantastico">
+            <img src="img/31.jpg" class="comedia">
+            <img src="img/32.jpg" class="documental">
+            <img src="img/47.jpg" class="musical romantico">
+            <img src="img/34.jpg" class="documental">
+            <img src="img/36.jpg" class="drama suspense">
+            <img src="img/37.jpg" class="drama">
+            <img src="img/60.jpg" class="animacion ciencia ficcion fantastico aventura accion">
+            <img src="img/38.jpg" class="drama">
+            <img src="img/39.jpg" class="drama comedia">
+            <img src="img/41.jpg" class="fantastico aventura">
+            <img src="img/42.jpg" class="fantastico aventura animacion">
+            <img src="img/35.jpg" class="documental">
+            <img src="img/44.jpg" class="fantastico musical romantico animacion">
+            <img src="img/45.jpg" class="fantastico musical animacion">
+            <img src="img/46.jpg" class="musical romantico drama">
+            <img src="img/40.jpg" class="drama">
+            <img src="img/48.jpg" class="musical suspense comedia">
+            <img src="img/49.jpg" class="musical romantico aventura fantastico">
+            <img src="img/26.jpg" class="ciencia ficcion comedia romantico aventura">
+            <img src="img/51.jpg" class="suspense drama">
+            <img src="img/29.jpg" class="comedia accion aventuras ciencia ficcion">
+            <img src="img/53.jpg" class="suspense">
+            <img src="img/54.jpg" class="suspense drama fantastico">
+            <img src="img/55.jpg" class="suspense">
+            <img src="img/56.jpg" class="animacion fantastico terror suspense">
+            <img src="img/33.jpg" class="documental">
+            <img src="img/58.jpg" class="animacion comedia ciencia ficcion">
+            <img src="img/59.jpg" class="animacion comedia drama">
+            
+        </main>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,29 @@
+HEAD
+  Tipografía de Google Fonts con link.
+
+BODY
+ HEADER
+  Tipografía de Google Fonts en CSS con @import.
+
+ MAIN
+  -NAV
+    Menú desplegable.
+
+  -INICIO
+    Animación con Keyframes en la imagen.
+
+  -GALERÍA
+    Lightbox.
+    Filtro a las imágenes.
+    Animación con transición a las imágenes.
+
+  -TRABAJOS
+    Animación con transición a las imágenes.
+
+  -SOBRE MI
+
+  -CONTACTO
+    Formulario.
+
+ FOOTER
+  Iconos de Font Awesome para RRSS.

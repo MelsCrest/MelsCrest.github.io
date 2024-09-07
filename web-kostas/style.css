@@ -1,0 +1,414 @@
+/*TIPOGRAFÍAS*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+/*Contenedor*/
+	#container{
+		margin: 0 auto;
+		width: 900px;
+		height: 900px;
+	}
+	/*Encabezado*/
+		header{
+			width: 900px;
+			height: 90px;
+			background-color: white;
+		}
+			h1{
+				text-align: center;
+				padding-top: 35px;
+				font-size: 40px;
+				font-weight:500;
+				font-family: 'Ubuntu', sans-serif;
+			}
+	/*Cuerpo*/
+		main{
+			width: 900px;
+			height: 750px;
+			position: relative;
+			overflow: hidden;
+		}
+		/*Barra Menú*/
+			nav{
+				width: 900px;
+				height: 50px;
+			}
+			/*Menú desplegable*/
+				nav ul{
+						list-style-type: none;
+						margin: 0 auto;
+						padding: 0;
+						position: absolute;
+					}
+						nav ul li{
+							width: 100px;
+							float: left;
+							margin: 5px 25px;
+							position: relative;
+						}
+							nav ul li a{
+								display: block;
+								width: 80px;
+								height: 30px;
+								padding-top:18px;
+								text-align: center;
+								text-decoration: none;
+								box-sizing: border-box;
+								border-radius: 2px;
+								color: black;
+							}
+							nav ul li a:hover{
+								font-weight: bold;
+							}
+								nav ul li ul{
+									width: 100px;
+									display: none;
+									margin-top: 7px;
+									padding-rigth: 20px;
+									padding-bottom: 20px;
+									background-color: white;
+									z-index: 10;
+								}
+									nav ul li ul li a{
+										margin-left: -18px;
+									}
+									
+									nav ul li:hover > ul{ 
+										display: block;
+									}
+/*-- INICIO --*/						
+			/*Imágenes*/
+				.principal{
+					height: 690px;
+					width: 900px;					
+				}	
+					.principal img{
+						height: 695px;
+						width:100%;
+						margin-top: 5px;
+					}
+			/*Animación*/
+				@keyframes derecha{
+					0%{
+						right: -105px;
+						top: 50px;
+					}
+					50%{
+						right: 290px;
+						top: 350px;
+						transform: scale(2,2);
+					}
+					65%{
+						right: 290px;
+						top: 350px;
+						transform: scale(2,2);
+						opacity:1;
+					}
+					100%{
+						right: 290px;
+						top: 350px;
+						transform: scale(2,2);
+						opacity:0;
+					}
+				}
+				#dch{
+					width: 100px;
+					position: absolute;
+					animation-name: derecha;
+					animation-duration: 8s;
+					animation-fill-mode: forwards;
+					z-index: 3;
+				}
+				@keyframes izquierda{
+					0%{
+						left: -105px;
+						bottom: -0px;
+					}
+					50%{
+						left: 290px;
+						bottom: 100px;
+						transform: scale(2,2);
+					}
+					65%{
+						left: 290px;
+						bottom: 100px;
+						transform: scale(2,2);
+						opacity:1;
+
+					}
+					100%{
+						left: 290px;
+						bottom: 100px;
+						transform: scale(2,2);
+						opacity:0;
+					}
+				}
+				#izq{
+					width: 100px;
+					position: absolute;
+					animation-name: izquierda;
+					animation-duration: 8s;
+					animation-fill-mode: forwards;
+					z-index: 3;
+				}
+/*-- GALERÍA --*/
+			/*Lightbox*/
+				#efecto{
+					width: 900px;
+					height: 700px;
+
+				}
+					a > img{
+						width: 270px;
+						height: 215px;
+						object-fit: cover;
+						margin-left: 20px;
+						margin-top: 5px;
+						margin-bottom: 7px;
+						transform: scale(1.0);
+						transition: all 0.5s;
+						filter: grayscale(70%);
+					}
+					a > img:hover{
+						transform: scale(1.1);
+						filter: grayscale(0%);
+					}
+/*-- TRABAJOS --*/
+			.works{
+				width: 900px;
+				height: 225px;
+				margin-top: 10px;
+			}
+			.caja1, .caja2, .caja3{
+				float: left;
+			}
+				.definicion{
+					height: 200px;
+					width: 250px;
+					font-size: 10pt;
+					padding: 10px;
+					float: left;
+					transform: translate(250px);
+					position: relative;
+					overflow: hidden;
+				}
+					.work1, .work2, .work3{
+						height: 200px;
+						width: 250px;
+						background: url("img/its-not-enough_04.jpg");
+						background-size: cover;
+						float: left; 
+						position: absolute;
+   						transition: all .8s;
+						left: 250px;
+					}
+					.work1{
+						background-position-y: -90px;
+						top: 0;
+						left: 0;
+
+					}
+					.work2{
+						background: url("img/hibiscus_02.jpg");
+						background-size: cover;	
+						background-position-y: -20px;
+						top: 0;
+						left: 0;
+					}
+					.work3{
+						background: url("img/terracotta_01.jpg");
+						background-size: cover;
+						background-position-y: -30px;
+						top: 0;
+						left: 0;
+					}
+					.definicion:hover .work1, .definicion:hover .work2, .definicion:hover .work3{
+						transform: translate(-250px);
+					} 
+					.definicion > h3, .definicion > p{
+						padding-top: 20px;
+					}
+				.nombre{
+					height: 200px;
+					width: 200px;
+					background-color: white;
+					font-size: 10pt;
+					padding: 10px;
+					float: left;
+					transform: translate(250px);
+				}
+					.nombre > p{
+							text-align: center;
+							padding-top: 65px;
+							font-size: 24px;
+							font-weight: bold;
+							color:#999999;
+					}
+
+/*-- EXPOSICIONES --*/
+			.caja{
+				height: 700px;
+				width: 900px;
+				padding-top: 1px;
+				background-color: white;
+			}
+				.show{
+					width: 900px;
+					height: 200px;
+					margin-top: 25px;
+				}	
+				.show > pre{
+					width: 400px;
+					float: left;
+									}
+					.newyork, .paris{
+						text-align: left;
+						margin-top: 20px;
+						margin-left: 5px;
+						padding-top: 20px;
+						padding-left:10px;
+						border-left: solid 3px black;
+					}
+					.athens{
+						text-align: right;
+						margin-top: 20px;
+						margin-right: 5px;
+						margin-left: 55px;
+						padding-top: 20px;
+						padding-right:10px;
+						border-right: solid 3px black;
+					}
+				.show > .carpent{
+					width: 400px;
+					float: left;
+					background-color: blue;
+					margin-left: 50px;
+				}
+				.show > .berelia{
+					width: 400px;
+					float: right;
+					margin-right: 40px;
+					background-color: blue;
+				}
+
+/*-- SOBRE MI --*/
+			#aboutme{
+				width: 900px;
+				height: 700px;
+				background-color: white;
+				margin-top: 7px;
+			}
+				.foto{
+					height: 692px;
+					width: 450px;
+					float: left;
+					}
+					.foto > img{
+						height: 692px;
+						width: 450px;
+					}
+				#aboutme > p{
+					float: left;
+					width: 430px;
+					text-align: left;
+					padding:10px 0px 10px 40px;
+				}
+/*-- CONTACTO --*/
+				#formulario{
+					background:url(img/background.png);
+					background: cover;
+					background-position: bottom;
+					margin-top: 7px;
+					width: 900px;
+					height: 700px;
+					position: relative;
+				}
+					h2{
+						padding:15px 30px 4px 30px;
+						background-color: white;
+						width: 250px;
+						transform: translate(20px, 25px);
+						font-size: 30px;
+					}
+					form{
+						width: 400px;
+						height: 590px;
+						background-color: white;
+						padding-left: 15px;
+						position: absolute;
+						top: 85px;
+						left: 20px;
+					}
+						label{
+							margin-top: 15px;
+							margin-bottom: 2px;
+							width: 400px;
+							height: 20px;
+							float: left;
+							font-weight: bold;
+						}
+							input{
+								width: 250px;
+								height: 25px;
+								clear: left;
+							}
+						.texto{
+							padding-top: 20px;
+						}
+							textarea{
+								margin-top: 5px;
+							}
+						#enviar{
+							width: 370px;
+							height: 35px;
+							background-color: black;
+							color: white;
+							margin: 240px 0px;
+							float: left;
+						}							
+	/*Pie de página*/
+		footer{
+			width: 900px;
+			height: 60px;
+			background-color:white;
+		}
+			footer > p{
+				float: left;
+				margin: 20px 15px;
+			}
+		/*RRSS*/
+			.rrss{
+				float: left;
+				width: 165px;
+				height: 30px;
+				margin-top: 15px;
+				text-align: right;
+				margin-left: 450px;
+			}
+				.face, .ins, .you, .exs{
+					float: left;
+				}
+				.ins{
+					margin-top: -2px;
+				}
+				.you{
+					margin-top: -2px;
+				}
+					div > a{
+						text-decoration: none;
+						color: black;
+					}
+						div > a:hover{
+							color:#999999;
+						}
+						i{
+							font-size: 25px;
+							margin-right:15px;
+						}
+						i[class*="instagram"], i[class*="youtube"]{
+							font-size: 30px;
+						}
